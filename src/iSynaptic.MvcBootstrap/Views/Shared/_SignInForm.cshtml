@@ -4,14 +4,26 @@
 @{ var signInFormModel = Model ?? new SignInFormModel(); }
 
 <form id="@signInFormModel.FormId" method="POST" accept-charset="UTF-8">
-    <label for="@signInFormModel.IdControlName">@signInFormModel.IdLabel</label>
-    <input name="@signInFormModel.IdControlName" type="text" value="@signInFormModel.Id" />
+    <div class="control-group">
+        <label for="@signInFormModel.IdControlName" class="control-label">@signInFormModel.IdLabel</label>
+        <div class="controls">
+            <input name="@signInFormModel.IdControlName" type="text" value="@signInFormModel.Id" />
+        </div>
+    </div>
 
-    <label for="@signInFormModel.PasswordControlName">@signInFormModel.PasswordLabel</label>
-    <input name="@signInFormModel.PasswordControlName" type="password" value="@signInFormModel.Password" />
+    <div class="control-group">
+        <label for="@signInFormModel.PasswordControlName" class="control-label">@signInFormModel.PasswordLabel</label>
+        <div class="controls">
+            <input name="@signInFormModel.PasswordControlName" type="password" value="@signInFormModel.Password" />
+        </div>
+    </div>
 
-    <label for="@signInFormModel.RememberMeControlName">@signInFormModel.RememberMeLabel</label>
-    <input name="@signInFormModel.RememberMeControlName" type="checkbox" checked="@signInFormModel.RememberMe"></input>
+    <div class="control-group">
+        <label class="checkbox">
+            <input name="@signInFormModel.RememberMeControlName" type="checkbox" checked="@signInFormModel.RememberMe"></input>
+            @signInFormModel.RememberMeLabel
+        </label>
+    </div>
     
     <input name="submit" type="submit" value="@signInFormModel.SubmitButtonLabel" class="btn btn-primary" />
 </form>

@@ -35,6 +35,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\lib\WebGrease.1.0.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Core">
+      <HintPath>..\..\lib\BundleTransformer.Core.1.4.2-beta3\lib\net40\BundleTransformer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Less">
+      <HintPath>..\..\lib\BundleTransformer.Less.1.4.2-beta3\lib\net40\BundleTransformer.Less.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Yui">
+      <HintPath>..\..\lib\BundleTransformer.Yui.1.4.2-beta3\lib\net40\BundleTransformer.Yui.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core">
+      <HintPath>..\..\lib\dotless.1.3.0.4\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET">
+      <HintPath>..\..\lib\YUICompressor.NET.2.0.0.0\lib\NET20\EcmaScript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\lib\YUICompressor.NET.2.0.0.0\lib\NET20\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="iSynaptic.Commons">
       <HintPath>..\..\lib\iSynaptic.Commons.0.4.8\lib\iSynaptic.Commons.dll</HintPath>
     </Reference>
@@ -50,6 +71,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\lib\Microsoft.AspNet.Web.Optimization.1.0.0-beta3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -73,6 +97,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
+    <Reference Include="WebGrease">
+      <HintPath>..\..\lib\WebGrease.1.0.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\..\lib\YUICompressor.NET.2.0.0.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AuthenticationController.cs" />
@@ -90,9 +120,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\bootstrap-responsive.min.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\global.css" />
+    <None Include="Content\css\global.less" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
     <Content Include="Content\js\bootstrap.min.js" />
@@ -121,6 +149,49 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mvc.sitemap" />
+    <None Include="BundleTransformer.Configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\css\bootstrap\accordion.less" />
+    <None Include="Content\css\bootstrap\alerts.less" />
+    <None Include="Content\css\bootstrap\bootstrap.less" />
+    <None Include="Content\css\bootstrap\breadcrumbs.less" />
+    <None Include="Content\css\bootstrap\button-groups.less" />
+    <None Include="Content\css\bootstrap\buttons.less" />
+    <None Include="Content\css\bootstrap\carousel.less" />
+    <None Include="Content\css\bootstrap\close.less" />
+    <None Include="Content\css\bootstrap\code.less" />
+    <None Include="Content\css\bootstrap\component-animations.less" />
+    <None Include="Content\css\bootstrap\dropdowns.less" />
+    <None Include="Content\css\bootstrap\forms.less" />
+    <None Include="Content\css\bootstrap\grid.less" />
+    <None Include="Content\css\bootstrap\hero-unit.less" />
+    <None Include="Content\css\bootstrap\labels-badges.less" />
+    <None Include="Content\css\bootstrap\layouts.less" />
+    <None Include="Content\css\bootstrap\mixins.less" />
+    <None Include="Content\css\bootstrap\modals.less" />
+    <None Include="Content\css\bootstrap\navbar.less" />
+    <None Include="Content\css\bootstrap\navs.less" />
+    <None Include="Content\css\bootstrap\pager.less" />
+    <None Include="Content\css\bootstrap\pagination.less" />
+    <None Include="Content\css\bootstrap\popovers.less" />
+    <None Include="Content\css\bootstrap\progress-bars.less" />
+    <None Include="Content\css\bootstrap\reset.less" />
+    <None Include="Content\css\bootstrap\responsive-1200px-min.less" />
+    <None Include="Content\css\bootstrap\responsive-767px-max.less" />
+    <None Include="Content\css\bootstrap\responsive-768px-979px.less" />
+    <None Include="Content\css\bootstrap\responsive-navbar.less" />
+    <None Include="Content\css\bootstrap\responsive-utilities.less" />
+    <None Include="Content\css\bootstrap\responsive.less" />
+    <None Include="Content\css\bootstrap\scaffolding.less" />
+    <None Include="Content\css\bootstrap\sprites.less" />
+    <None Include="Content\css\bootstrap\tables.less" />
+    <None Include="Content\css\bootstrap\thumbnails.less" />
+    <None Include="Content\css\bootstrap\tooltip.less" />
+    <None Include="Content\css\bootstrap\type.less" />
+    <None Include="Content\css\bootstrap\utilities.less" />
+    <None Include="Content\css\bootstrap\variables.less" />
+    <None Include="Content\css\bootstrap\wells.less" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>

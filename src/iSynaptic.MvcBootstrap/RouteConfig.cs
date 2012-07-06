@@ -35,7 +35,7 @@ namespace iSynaptic.MvcBootstrap
             routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { id = UrlParameter.Optional }
             );
 
             routes.MapRoute(

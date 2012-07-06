@@ -1,0 +1,11 @@
+<Configuration>
+  <CoverageFilters>
+    <IncludeFilters>
+      <Filter ModuleMask="*" ClassMask="*" FunctionMask="*" />
+    </IncludeFilters>
+    <ExcludeFilters />
+  </CoverageFilters>
+  <SnapshotDialog>
+    <InitialDirectory>C:\Users\Administrator\Documents\GitHub\iSynaptic.MvcBootstrap\src</InitialDirectory>
+  </SnapshotDialog>
+</Configuration>
